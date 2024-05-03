@@ -2,10 +2,9 @@
 - hosts: localhost
   connection: local
   become: yes
-  pre-tasks:
-  - name: update packages
-    apt:
-      update_cache: yes
   tasks:
-  - include: tasks/packages.yml
-  - include: tasks/cron.yml
+    - name: update packages
+      apt:
+        update_cache: yes
+    - include: tasks/packages.yml
+    - include: tasks/cron.yml

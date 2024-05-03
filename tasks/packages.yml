@@ -1,0 +1,7 @@
+- name: Install package
+  apt:
+    name:
+     - htop
+     - zip
+     - unzip
+     - net-tools
