@@ -6,5 +6,5 @@
     - name: update packages
       apt:
         update_cache: yes
-    - include: tasks/packages.yml
-    - include: tasks/cron.yml
+    - include_tasks: tasks/packages.yml
+    - include_tasks: tasks/cron.yml
